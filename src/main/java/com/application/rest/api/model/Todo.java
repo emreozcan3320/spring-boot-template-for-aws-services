@@ -1,4 +1,4 @@
-package com.elastic.beanstalk.rest.api.model;
+package com.application.rest.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
-package com.elastic.beanstalk.rest.api.controller;
+package com.application.rest.api.controller;
 
-import com.elastic.beanstalk.rest.api.model.Todo;
-import com.elastic.beanstalk.rest.api.service.TodoService;
+import com.application.rest.api.model.Todo;
+import com.application.rest.api.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;

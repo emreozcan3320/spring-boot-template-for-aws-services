@@ -1,6 +1,6 @@
-package com.elastic.beanstalk.rest.api.repository;
+package com.application.rest.api.repository;
 
-import com.elastic.beanstalk.rest.api.model.Todo;
+import com.application.rest.api.model.Todo;
 import org.springframework.data.repository.CrudRepository;
 
 

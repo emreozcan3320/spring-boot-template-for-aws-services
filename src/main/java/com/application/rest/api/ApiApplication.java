@@ -1,4 +1,4 @@
-package com.elastic.beanstalk.rest.api;
+package com.application.rest.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

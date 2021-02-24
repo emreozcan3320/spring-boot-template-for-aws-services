@@ -1,4 +1,4 @@
-package com.elastic.beanstalk.rest.api;
+package com.application.rest.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

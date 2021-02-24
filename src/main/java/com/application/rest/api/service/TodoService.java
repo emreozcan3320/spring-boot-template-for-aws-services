@@ -1,7 +1,7 @@
-package com.elastic.beanstalk.rest.api.service;
+package com.application.rest.api.service;
 
-import com.elastic.beanstalk.rest.api.model.Todo;
-import com.elastic.beanstalk.rest.api.repository.TodoRepository;
+import com.application.rest.api.model.Todo;
+import com.application.rest.api.repository.TodoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
