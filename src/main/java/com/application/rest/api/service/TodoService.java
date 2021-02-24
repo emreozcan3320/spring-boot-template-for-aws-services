@@ -1,32 +1,36 @@
 package com.application.rest.api.service;
 
 import com.application.rest.api.model.Todo;
-import com.application.rest.api.repository.TodoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class TodoService {
 
-	private final TodoRepository todoRepository;
+	private HashMap<String, Todo> mockDb = new HashMap<>();
 
-	public Iterable<Todo> getAll() {
-		return todoRepository.findAll();
+	public Collection<Todo> getAll() {
+		return mockDb.values();
 	}
 
-	public Optional<Todo> getById(int id) {
-		return todoRepository.findById(id);
+	public Optional<Todo> getById(String id) {
+		return Optional.ofNullable(mockDb.get(id));
 	}
 
 	public void save(Todo todo) {
-		todoRepository.save(todo);
+		String id = UUID.randomUUID().toString();
+		todo.setId(id);
+		mockDb.put(id, todo);
 	}
 
-	public void deleteById(int id) {
-		todoRepository.deleteById(id);
+	public void deleteById(String id) {
+		mockDb.remove(id);
 	}
 
 }

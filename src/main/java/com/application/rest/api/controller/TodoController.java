@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.Optional;
 
 
@@ -24,13 +25,13 @@ public class TodoController {
 	private final TodoService todoService;
 
 	@GetMapping
-	public Iterable<Todo> getAllTodos() {
+	public Collection<Todo> getAllTodos() {
 		return todoService.getAll();
 	}
 
 	@GetMapping("/{id}")
 	public Optional<Todo> getTodoById(@PathVariable String id) {
-		return todoService.getById(Integer.parseInt(id));
+		return todoService.getById(id);
 	}
 
 	@PostMapping
@@ -40,7 +41,7 @@ public class TodoController {
 
 	@DeleteMapping("{id}")
 	public void deleteTodo(@PathVariable String id) {
-		todoService.deleteById(Integer.parseInt(id));
+		todoService.deleteById(id);
 	}
 }
 
